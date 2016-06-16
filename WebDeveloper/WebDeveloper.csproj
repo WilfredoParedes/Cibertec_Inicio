@@ -220,6 +220,7 @@
     <Content Include="scss\base\_site.scss" />
     <Content Include="scss\helpers\_colors.scss" />
     <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
