@@ -10,12 +10,16 @@ namespace WebDeveloper.Controllers
 {
     public class ClientController : Controller
     {
-        private ClientData _client = new ClientData();
-        // GET: Client
+        private ClientData _client;
+        public ClientController(ClientData client)
+        {
+            _client = client;
+
+        }
         public ActionResult Index()
         {
-           
 
+            ViewBag.Title = Resources.Resource.Client_Title;
             return View(_client.GetList());
         }
 

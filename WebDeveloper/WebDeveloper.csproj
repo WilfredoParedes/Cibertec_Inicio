@@ -44,6 +44,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LightInject, Version=3.0.1.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.3.0.1.7\lib\net45\LightInject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LightInject.Mvc, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.Mvc.1.0.0.4\lib\net45\LightInject.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LightInject.Web, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.Web.1.0.0.4\lib\net45\LightInject.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -247,6 +259,10 @@
     <ProjectReference Include="..\WebDeveloper.Model\WebDeveloper.Model.csproj">
       <Project>{8791883b-1bc1-4527-990d-7882b59a6f9f}</Project>
       <Name>WebDeveloper.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebDeveloper.Resources\WebDeveloper.Resources.csproj">
+      <Project>{fd54d178-4178-4e36-965d-5497d21def2b}</Project>
+      <Name>WebDeveloper.Resources</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

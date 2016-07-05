@@ -28,17 +28,13 @@ namespace WebDeveloper.ActionFilters
             Log("OnResultExecuting", filterContext.RouteData);
         }
 
-        public override void OnResultExecuted(ResultExecutingContext filterContext)
+        public override void OnResultExecuted(ResultExecutedContext filterContext)
         {
             Log("OnResultExecuted", filterContext.RouteData);
-        }
+        }      
 
-        private void Log(string v, RouteData routeData)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Log(string actionMethod, RouteData routeData)
+       
+        public void Log(string actionMethod, RouteData routeData)
         {
             var controlName = routeData.Values["controller"];
             var actionName = routeData.Values["action"];
