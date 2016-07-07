@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNet.Identity
+
+@if (Request.IsAuthenticated)
+{
+    //Cuando este logeado
+    using (Html.BeginForm("LogOff","Account",
+        FormMethod.Post,
+        new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()//Evita que la pagina sea logeado desde otro html
+        <ul class="nav nav-bar-nav navbar-right">
+            <li>
+                @Html.ActionLink("Hello" + User.Identity.GetUserName(),
+                "Manage",
+                "Account",
+                routeValues: null,
+                htmlAttributes: new { title = "Manage" }
+                )
+            </li>
+        </ul>
+            <li>
+                <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+            </li>
+        
+    }
+}
+else
+{
+    //cuando este logeado
+<ul class="nav nav-bar-nav navbar-right ">
+    <li>
+        @Html.ActionLink("Register","Regsiter","Account")
+    </li>
+    <li>
+        @Html.ActionLink("Log In","Login","Acount")
+    </li>
+</ul>
+}

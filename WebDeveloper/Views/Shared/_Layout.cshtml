@@ -3,8 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Aplicación HTML5</title>
-    @Scripts.Render("~/bundles/jquery")    
-    @Scripts.Render("~/bundles/modernizr")  
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/css")
 </head>
 <body>
@@ -20,16 +20,12 @@
                     @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
                 <nav class="navbar-collapse collapse">
-                    @*
+                    <ul class="nav navbar-nav">
                         @Html.ActionLink("Home", "Index", "Home")
                         @Html.ActionLink("About", "About", "Home")
                         @Html.ActionLink("Contact", "Contact", "Home")
-                    *@
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home","Index","Home")</li>
-                        <li>@Html.ActionLink("Client", "Index", "Client")</li>
-                        <li>@Html.ActionLink("Product", "Index", "Product")</li>
                     </ul>
+                    @Html.Partial("_LoginPartial")
                 </nav>
             </div>
         </div>
