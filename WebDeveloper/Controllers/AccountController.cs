@@ -21,7 +21,9 @@ namespace WebDeveloper.Controllers
         public AccountController()
             : this(new UserManager<WebDeveloperUser>
                   (new UserStore<WebDeveloperUser>
-                (new WebUserDbContext())))
+                (new WebUserDbContext())
+                )
+                  )
         {
 
         }
@@ -64,6 +66,14 @@ namespace WebDeveloper.Controllers
                 return RedirectToAction("Index", "Home");
             }
             return View(model);
+        }
+
+        [HttpPost]
+
+        public ActionResult LogOff()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
         }
         private IAuthenticationManager AuthenticationManager
         {

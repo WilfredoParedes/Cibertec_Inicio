@@ -4,6 +4,7 @@ using Owin;
 using System.Reflection;
 using WebDeveloper.DataAccess;
 using WebDeveloper.Model;
+using System;
 
 [assembly: OwinStartupAttribute(typeof(WebDeveloper.Startup))]
 namespace WebDeveloper
@@ -18,6 +19,11 @@ namespace WebDeveloper
             container.RegisterAssembly("WebDeveloper.*.dll");
             container.RegisterControllers();
             container.EnableMvc();
+        }
+
+        private void ConfigureAuth(IAppBuilder app)
+        {
+            throw new NotImplementedException();
         }
     }
 }
